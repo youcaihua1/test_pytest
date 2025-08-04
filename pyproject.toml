@@ -1,5 +1,9 @@
 [tool.pytest.ini_options]
-
 addopts = [
-    "--screenshot", "only-on-failure"
+    "--driver", "Edge",
+    "--screenshot", "only-on-failure",
+    "-n", "auto",
+    "--alluredir=allure",
+    "--driver-path=D:\\img\\driver\\msedgedriver.exe"
 ]
+
