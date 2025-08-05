@@ -47,7 +47,7 @@ def test_pytestconfig(pytestconfig):
     print('rootdir         :', pytestconfig.rootdir)
     print('-k EXPRESSION   :', pytestconfig.getoption('keyword'))
     print('-v, --verbose   :', pytestconfig.getoption('verbose'))
-    print('-q, --quiet     :', pytestconfig.getoption('quiet'))
+    # print('-q, --quiet     :', pytestconfig.getoption('quiet'))
     print('-l, --showlocals:', pytestconfig.getoption('showlocals'))
     print('--tb=style      :', pytestconfig.getoption('tbstyle'))
 
