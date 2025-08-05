@@ -13,8 +13,8 @@ def author_file_json(tmpdir_factory):
         'Luciano': {'City': 'Sau Paulo'}
     }
 
-    file_ = tmpdir_factory.mktemp('data').join('author_file.json')
-    print('file:{}'.format(str(file_)))
+    file = tmpdir_factory.mktemp('data').join('author_file.json')
+    print('file:{}'.format(str(file)))
 
     with file.open('w') as f:
         json.dump(python_author_data, f)
