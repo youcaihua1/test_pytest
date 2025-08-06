@@ -4,7 +4,7 @@ addopts = [
     "--screenshot", "only-on-failure",
     "--video", "retain-on-failure",
     "-n", "auto",
-    "--alluredir=allure",
+    "--alluredir=D:\\Python\\PycharmProjects\\test_pytest\\allure",
     "--driver-path=D:\\Programs\\driver\\edgedriver_win64\\msedgedriver.exe"
 ]
 
