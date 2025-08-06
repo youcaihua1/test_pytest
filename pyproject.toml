@@ -5,6 +5,6 @@ addopts = [
     "--video", "retain-on-failure",
     "-n", "auto",
     "--alluredir=allure",
-    "--driver-path=D:\\img\\driver\\msedgedriver.exe"
+    "--driver-path=D:\\Programs\\driver\\edgedriver_win64\\msedgedriver.exe"
 ]
 

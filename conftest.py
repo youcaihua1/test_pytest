@@ -1,4 +1,5 @@
 import re
+import os
 import allure
 import pytest
 from pathlib import Path
@@ -7,6 +8,7 @@ SCREENSHOT_NAME_PATTERN = re.compile(r"^test-failed-\d+\.png$")  # 匹配截图�
 VIDEO_NAME_PATTERN = re.compile(r".*\.webm$")  # 匹配视频文件
 
 
+# 在失败的测试中添加截图和视频
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_teardown(item, nextitem):
     yield
