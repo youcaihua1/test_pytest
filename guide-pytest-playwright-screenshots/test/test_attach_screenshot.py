@@ -19,6 +19,8 @@ def test_attach_screenshot(page, path="img/screenshot.png"):
 def test_attach_screenshot_2(page, name='screenshot-2'):
     page.goto(
         "https://allurereport.org/docs/guides/playwright-pytest-screenshots/#_2-screenshots-with-playwright-pytest")
+    browser_type = page.context.browser.browser_type.name  # 返回 'chromium', 'firefox' 或 'webkit'
+    print(f"当前浏览器: {browser_type}")
     allure.attach(
         page.screenshot(),
         name=name,
