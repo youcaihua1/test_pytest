@@ -10,7 +10,11 @@ def test_def_prefs_full():
 
 
 def test_def_prefs_change_home(tmpdir, monkeypatch):
-    monkeypatch.setenv('HOME', tmpdir.mkdir('home'))
+    # monkeypatch.setenv()的要求：
+    # - 明确要求环境变量值必须是字符串(str)
+    # - 如果传递其他类型，会尝试隐式转换，但这不是推荐做法
+    # 该代码 monkeypatch.setenv('HOME', tmpdir.mkdir('home')) 需要修改， 修改后：
+    monkeypatch.setenv('HOME', str(tmpdir.mkdir('home')))
     cheese.write_default_cheese_preferences()
     expected = cheese._default_prefs
     actual = cheese.read_cheese_preferences()
