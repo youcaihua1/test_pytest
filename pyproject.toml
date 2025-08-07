@@ -7,4 +7,6 @@ addopts = [
     "--alluredir=D:\\Python\\PycharmProjects\\test_pytest\\allure",
     "--driver-path=D:\\Programs\\driver\\edgedriver_win64\\msedgedriver.exe"
 ]
-
+markers = [
+    "slow: marks tests as slow"
+]
