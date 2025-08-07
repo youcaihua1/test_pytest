@@ -1,3 +1,6 @@
+import allure
+
+
 def test_tmpdir(tmpdir):
     # tmpdir already has a path name associated with it
     # join() extends the path to include a filename
@@ -44,3 +47,22 @@ def test_tmpdir_factory(tmpdir_factory):
 
     assert a_file.read() == 'contents may settle during shipping'
     assert another_file.read() == 'something different'
+
+
+def test_file_operations(tmpdir):
+    """tmpdir 夹具基础用法"""
+    # 创建临时文件并写入内容
+    temp_file = tmpdir.join("test.txt")
+    temp_file.write("Hello pytest")
+    # 读取文件验证内容
+    with allure.step('读取文件验证内容'):
+        assert temp_file.read() == "Hello pytest"
+    # 创建子目录
+    sub_dir = tmpdir.mkdir("subfolder")
+    sub_file = sub_dir.join("data.json")
+    sub_file.write('{"key": "value"}')
+    # 验证路径存在
+    with allure.step('验证路径存在'):
+        assert tmpdir.exists()
+
+
