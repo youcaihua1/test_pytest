@@ -5,10 +5,10 @@
     该模块的目标：展示了Selenium文件上传的流程.
     
 使用示例:
-    >>> pytest -n 1 test_file_upload.py
+    > pytest -n 1 test_file_upload.py
     先运行pytest后 在运行下面命令：
-    >>> allure generate ./allure -o ./allure-report --clean (这个需要在项目根目录下运行)
-    >>> allure open ./allure-report (这个需要在项目根目录下运行)
+    > allure generate ./allure -o ./allure-report --clean (这个需要在项目根目录下运行)
+    > allure open ./allure-report (这个需要在项目根目录下运行)
 作者: ych
 创建日期: 2025/8/11
 修改历史:

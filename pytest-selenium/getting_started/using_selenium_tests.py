@@ -8,11 +8,11 @@
     driver：测试夹具，为测试函数提供导航到目标页面的Chrome浏览器实例，并在测试后自动关闭。
     
 使用示例:
-    >>> pytest using_selenium_tests.py
-    >>> pytest -n 0 using_selenium_tests.py (不使用并行执行)
+    > pytest using_selenium_tests.py
+    > pytest -n 0 using_selenium_tests.py (不使用并行执行)
     先运行pytest后 在运行下面命令：
-    >>> allure generate ./allure -o ./allure-report --clean (这个需要在项目根目录下运行)
-    >>> allure open ./allure-report (这个需要在项目根目录下运行)
+    > allure generate ./allure -o ./allure-report --clean (这个需要在项目根目录下运行)
+    > allure open ./allure-report (这个需要在项目根目录下运行)
 作者: ych
 创建日期: 2025/8/8
 修改历史:

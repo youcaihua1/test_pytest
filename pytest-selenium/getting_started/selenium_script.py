@@ -9,7 +9,7 @@
     元素定位：https://www.yuque.com/u37693518/gcfu7m/peteek34nq38uasf
 
 使用示例:
-    >>> python selenium_script.py
+    > python selenium_script.py
 
 作者: ych
 创建日期: 2025/8/8

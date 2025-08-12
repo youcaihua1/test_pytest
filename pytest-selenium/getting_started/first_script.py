@@ -8,7 +8,7 @@
 
 
 使用示例:
-    >>> python first_script.py
+    > python first_script.py
 
 作者: ych
 邮箱:
