@@ -1,5 +1,5 @@
 """
-模块名称: using_best_practice.py
+模块名称: test_using_best_practice.py
 
 功能描述:
     该模块的目标：
@@ -17,7 +17,7 @@
     # - 定位器生成方法支持动态查询
 
 使用示例:
-    > pytest -n 0 using_best_practice.py
+    > pytest -n 0 test_using_best_practice.py
     先运行pytest后 在运行下面命令：
     > allure generate ./allure -o ./allure-report --clean (这个需要在项目根目录下运行)
     > allure open ./allure-report (这个需要在项目根目录下运行)
