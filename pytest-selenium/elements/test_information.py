@@ -38,11 +38,16 @@
     1. 2025/8/11 - 创建文件
 """
 from selenium.webdriver.common.by import By
-
+from loguru import logger
 import pytest
 
 
 def test_informarion(driver):
+    logger.info(driver)  # 添加日志信息
+    # 代码中未显式调用allure.attach.file, 因Allure已通过hook自动完成:
+    # - 捕获stdout/stderr
+    # - 捕获logging模块输出
+    # - 自动关联到对应测试步骤
     driver.implicitly_wait(0.5)
 
     driver.get("https://www.selenium.dev/selenium/web/inputs.html")
